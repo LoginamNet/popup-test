@@ -1,0 +1,302 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Play&family=Raleway&display=swap');
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.SASHA-button {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.popup-back-image {
+    position: absolute;
+    z-index: 25;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url(img/bg.png);
+    background-size: cover;
+}
+
+.popup-box {
+
+    width: 1200px;
+    height: 700px;
+    z-index: 50;
+    margin: auto;
+    background: #212F4C;
+    box-shadow: 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 11px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-basis: 50%;
+}
+
+.popup-picture {
+    width: 600px;
+    height: 100%;
+    background-image: url(img/left-img.svg);
+    background-size: cover;
+    background-position: 65% center;
+}
+
+.popup-fields {
+    position: relative;
+    width: 600px;
+}
+
+.popup-main {
+    margin: 40px 40px 25px 40px;
+}
+
+.popup-title {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin-bottom: 37px;
+}
+
+.popup-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.popup-form-element {
+    position: relative;
+}
+
+.popup-form-element input,
+.popup-form-element textarea,
+.popup-button {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+}
+
+.popup-form-element input:focus,
+.popup-form-element input:active,
+.popup-form-element textarea:focus,
+.popup-form-element textarea:active {
+    outline: none;
+    box-shadow: 0 0 0 2px #ADBF51;
+    border: none;
+}
+
+
+.popup-form-element input{
+    font-size: 16px;
+    line-height: 24px;
+    width: 250px;
+    padding: 16px 20px;
+    
+}
+
+.input-invalid {
+    box-shadow: 0 0 0 2px #E75F5F;
+}
+
+#name-button,
+#town-button,
+#phone-button,
+#mail-button,
+#pass1-button,
+#pass2-button,
+#popup-close,
+#show-hide,
+#arrow-down {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(img/icons/arrow-down.svg) no-repeat;
+ }
+
+ input::-webkit-calendar-picker-indicator:hover {
+     transform: scale(1.1);
+     cursor: pointer;
+ }
+
+
+#popup-close {
+    top: 16px;
+    right: 16px;
+}
+
+
+#name-button,
+#town-button,
+#phone-button,
+#mail-button,
+#pass1-button,
+#pass2-button,
+#show-hide {
+    top:50%;
+    right:20px;
+    transform:translateY(-50%);
+    width: 24px;
+    height: 24px;
+    padding: 2.15px 1.65px 2px 1.65px;
+    z-index: 200;
+}
+
+#name-button,
+#town-button,
+#phone-button,
+#mail-button,
+#pass1-button,
+#pass2-button {
+    display: none;
+}
+
+#town-button,
+#pass1-button,
+#pass2-button {
+    right:48px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltip-text {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: -51px;
+    left: -20px;
+    margin-right : -400px;
+    padding: 14px;
+    transition: 0.3s;
+    font-size: 14px;
+    line-height: 14px;
+    color: #E75F5F;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#name-button img:hover,
+#town-button img:hover,
+#phone-button img:hover,
+#mail-button img:hover,
+#pass1-button img:hover,
+#pass2-button img:hover,
+#show-hide img:hover,
+#popup-close img:hover,
+#arrow-down img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.popup-form-element textarea {
+    font-family: 'Nunito Sans';
+	width: 520px;
+    height: 136px;
+    resize: vertical;
+    padding: 16px 20px;
+}
+
+
+.text-area-counter {
+    position: absolute;
+    right: 0;
+    width: 33px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.popup-button {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    width: 250px;
+    padding: 14px 4px;
+    background: #FFC044;
+    margin: 30px auto;
+    transition: 0.3s;
+}
+
+.popup-button:hover {
+    background: #FDE782;
+    cursor: pointer;
+}
+
+.popup-button:active {
+    background: #FF9C41;
+}
+
+.bottom-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>СашинПОП</title>
+    <link rel="stylesheet" href="popup-style.css">
+  </head>
+  <body>
+    <div class="SASHA-button"><button type="button" id="SASHA" onclick="popupVisiblity()">ААААААААААААА!</button></div>
+    <div class="hidden" id="show-me-magic">
+      <div class="popup">
+        <div class="popup-back-image"></div>
+        <div class="popup-box">
+          <div class="popup-picture"></div>
+          <div class="popup-fields">
+            <button type="button" id="popup-close" onclick="popupVisiblity()"><img src="img/icons/close.svg" alt="" id="popup-close-button"></button>
+            <div class="popup-main">
+              <div class="popup-title">Зарегистрируйтесь и<br>участвуйте с нами в походах!</div>
+                <form action="" id="popup-form" onsubmit="submitForm(event)">
+                <div class="popup-form">
+                  <div class="popup-form-element">
+                    <input type="text" placeholder="Ваше имя" name="your-name" id="popup-your-name">
+                    <button type="button" id="name-button" onclick=""><div class="tooltip" id="name-tooltip"><img  class="hidden" src="img/icons/warning.svg" alt="" id="warning-name"><span class="tooltip-text">Введите ваше имя</span></div></button>
+                  </div>
+                  
+                  <div class="popup-form-element">
+                    <input type="text" list="cities" placeholder="Ваш город" name="your-town" id="popup-your-town">
+                    <datalist id="cities">
+                      <option value="Москва"></option>
+                      <option value="Замкадье"></option>
+                      <option value="Бобруйск"></option>
+                    </datalist>
+                    <button type="button" id="town-button" onclick=""><div class="tooltip" id="town-tooltip"><img class="hidden" src="img/icons/warning.svg" alt="" id="warning-town"><span class="tooltip-text">Введите ваш город</span></div></button>
+                    
+                  </div>
+    
+                  <div class="popup-form-element">
+                    <input type="tel" placeholder="+7-XXX-XXX-XX-XX" name="your-tel" id="popup-your-tel">
+                    <button type="button" id="phone-button" onclick=""><div class="tooltip" id="tel-tooltip"><img class="hidden" src="img/icons/warning.svg" alt="" id="warning-phone"><span class="tooltip-text">Неправильный формат номера</span></div></button>
+                  </div>
+    
+                  <div class="popup-form-element">
+                    <input type="email" placeholder="Ваш e-mail" name="your-mail" id="popup-your-mail">
+                    <button type="button" id="mail-button" onclick=""><div class="tooltip" id="mail-tooltip"><img class="hidden" src="img/icons/warning.svg" alt="" id="warning-mail"><span class="tooltip-text">Неверно указан e-mail</span></div></button>
+                  </div>
+    
+                  <div class="popup-form-element">
+                    <input type="password" size="40" maxlength="16" name="your-pass" id="popup-your-pass" placeholder="Пароль">
+                    <button type="button" id="show-hide" onclick="passwordShowHide(password, eyeImg)"><img src="img/icons/eye.svg" alt="" id="eye"></button><button type="button" id="pass1-button" onclick=""><div class="tooltip" id="pass-tooltip"><img class="hidden" src="img/icons/warning.svg" alt="" id="warning-length"><span class="tooltip-text">Пароль должен быть не менее 8 и не более 16 символов</span></div></button>
+                  </div>
+    
+                  <div class="popup-form-element">
+                    <input type="password" size="40" maxlength="16" name="your-pass-repeat" id="popup-your-pass-repeat" placeholder="Подтвердите пароль">
+                    <button type="button" id="show-hide" onclick="passwordShowHide(passwordRep, eyeImgRepeat)"><img src="img/icons/eye.svg" alt="" id="eye-repeat"></button><button type="button" id="pass2-button" onclick=""><div class="tooltip" id="pass-tooltip"><img class="hidden" src="img/icons/warning.svg" alt="" id="warning-pass"><span class="tooltip-text">Пароли не совпадают</span></div></button>
+                  </div>
+    
+                  <div class="popup-form-element textarea">
+                    <textarea name="about-you" id="popup-about-you" cols="20" rows="3" maxlength="100" placeholder="Расскажите о себе"></textarea>
+                    <div class="text-area-counter"><span class="letter-counter">0</span>/100</div>
+                  </div>
+                </div>
+    
+                <button class="popup-button" type="submit" id="submit-button">Зарегистрироваться</button>
+
+                <p class="bottom-text">*Нажимая на кнопку, Вы даёте согласие на обработку, хранение и использование своих персональных данных</p>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
